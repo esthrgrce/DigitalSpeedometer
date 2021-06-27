@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/advent_pro_semibold</item>
+        <item>@font/aldrich</item>
+        <item>@font/allerta</item>
+        <item>@font/changa_one</item>
+        <item>@font/coda_extrabold</item>
+        <item>@font/droid_sans_mono</item>
+        <item>@font/nova_round</item>
+        <item>@font/press_start_2p</item>
+        <item>@font/quantico</item>
+    </array>
+</resources>
