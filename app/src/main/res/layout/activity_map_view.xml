@@ -8,7 +8,7 @@
     tools:context=".MapView">
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/txtTime"
         android:layout_width="128dp"
         android:layout_height="62dp"
         android:fontFamily="@font/quantico"
@@ -24,23 +24,39 @@
         app:layout_constraintVertical_bias="0.911" />
 
     <TextView
-        android:id="@+id/textView16"
-        android:layout_width="138dp"
+        android:id="@+id/txtDistance"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:fontFamily="@font/quantico"
         android:gravity="center"
-        android:text="0  km"
+        android:text="0.0"
         android:textColor="#04FFE3"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.904" />
+        app:layout_constraintVertical_bias="0.905" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/lblDistanceUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/quantico"
+        android:gravity="center"
+        android:text="km"
+        android:textColor="#04FFE3"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDistance"
+        app:layout_constraintStart_toEndOf="@+id/txtDistance"
+        app:layout_constraintTop_toTopOf="@+id/txtDistance"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtSpeed"
         android:layout_width="171dp"
         android:layout_height="116dp"
         android:fontFamily="@font/quantico"
@@ -55,7 +71,7 @@
         app:layout_constraintVertical_bias="0.878" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/lblUnit"
         android:layout_width="113dp"
         android:layout_height="49dp"
         android:fontFamily="@font/quantico"
@@ -85,15 +101,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.google.android.gms.maps.MapView
+    <fragment
         android:id="@+id/mapView"
-        android:layout_width="414dp"
-        android:layout_height="453dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cameraZoom="13"
+        app:layout_constraintBottom_toTopOf="@+id/txtSpeed"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
+        app:uiCompass="true"
+        app:uiZoomControls="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
